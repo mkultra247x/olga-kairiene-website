@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Sample blog posts - in production these would come from a CMS or markdown files
+const posts = [
+  {
+    slug: 'ai-socialmedia-turiniui',
+    title: 'Ar naudojate #AI (dirbtinį intelektą) #socialmedia turinio kūrimui?',
+    category: 'AI | Dirbtinis intelektas',
+    image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/65df368964ca3114ddf06310_Olga%20Kairiene.jpeg',
+    excerpt: 'Dirbtinis intelektas keičia turinio kūrimo būdus. Sužinokite, kaip AI gali padėti jūsų socialinių tinklų komunikacijoje.'
+  },
+  {
+    slug: 'ceo-socialiniai-tinklai',
+    title: 'Vadovas pokyčių akivaizdoje: CEO ir socialiniai tinklai',
+    category: 'Vadovo asmeninis prekės ženklas',
+    image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/65d87357da5d205f2538ab62_Vadovai%20ir%20socialiniai%20tinklai.webp',
+    excerpt: 'Kodėl vadovų dalyvavimas socialiniuose tinkluose tampa vis svarbesnis ir kaip tai daryti efektyviai.'
+  },
+  {
+    slug: 'ambasadoryste-tendencijos',
+    title: 'Darbuotojų ambasadorystės ir komunikacijos socialiniuose tinkluose tendencijos',
+    category: 'Darbuotojų ambasadorystė',
+    image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/63c404bd6533f6f5a9648d33_Olga%20Kairiene%20Ambasadoryste%20(1)%20copy.jpg',
+    excerpt: 'Apžvelgiame naujausias darbuotojų ambasadorystės tendencijas ir kaip jas pritaikyti savo organizacijoje.'
+  },
+  {
+    slug: 'linkedin-smart-casual',
+    title: 'LinkedIn #SmartCasual stiliuje – būk savimi',
+    category: 'LinkedIn',
+    image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/635fa00dabdfdcf3bd94a2f1_Olga%20Kairiene%20-%20ambasadoryste.jpeg',
+    excerpt: 'Kaip kurti autentišką turinį LinkedIn platformoje išlaikant profesionalumą, bet liekant savimi.'
+  },
+  {
+    slug: 'asmeninis-prekes-zenklas-kodel-svarbu',
+    title: 'Asmeninis prekės ženklas – kodėl tai svarbu?',
+    category: 'Asmeninis prekės ženklas',
+    image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/5feda1793532cb289641a6ab_Ambasadoriu%CC%A8%20Akademija%20(1).jpg',
+    excerpt: 'Virtualus aš = Realus Aš. Sužinokite, kodėl investicija į asmeninį prekės ženklą atsiperka.'
+  }
+];
+---
+
+<Layout title="Blog'as" description="Straipsniai apie asmeninį prekės ženklą, darbuotojų ambasadorystę ir LinkedIn komunikaciją.">
+  <section class="section" style="padding-top: 10rem; background: var(--color-light);">
+    <div class="container" style="text-align: center;">
+      <h1>Blog'as</h1>
+      <p style="font-size: 1.2rem; color: var(--color-text-light); max-width: 600px; margin: 0 auto;">Mintys apie asmeninį prekės ženklą, darbuotojų ambasadorystę ir komunikaciją socialiniuose tinkluose.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        {posts.map(post => (
+          <a href={`/blog/${post.slug}`} class="blog-card">
+            <img src={post.image} alt={post.title}>
+            <div class="blog-card-content">
+              <span class="blog-card-category">{post.category}</span>
+              <h3>{post.title}</h3>
+              <p style="color: var(--color-text-light); font-size: 0.95rem; margin-top: 0.5rem;">{post.excerpt}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-card {
+    display: block;
+    text-decoration: none;
+  }
+  
+  .blog-card h3 {
+    color: var(--color-text);
+    transition: color 0.3s ease;
+  }
+  
+  .blog-card:hover h3 {
+    color: var(--color-accent);
+  }
+</style>

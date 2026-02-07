@@ -1,0 +1,170 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  const posts = [
+    {
+      slug: 'ai-socialmedia-turiniui',
+      title: 'Ar naudojate #AI (dirbtinį intelektą) #socialmedia turinio kūrimui?',
+      category: 'AI | Dirbtinis intelektas',
+      image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/65df368964ca3114ddf06310_Olga%20Kairiene.jpeg',
+      content: `
+        <p>Dirbtinis intelektas (AI) sparčiai keičia turinio kūrimo kraštovaizdį. Nuo tekstų generavimo iki vaizdinių pasiūlymų – AI įrankiai tampa neatsiejama rinkodaros specialistų ir asmeninių prekės ženklų kūrėjų darbo dalimi.</p>
+        
+        <h2>Kaip AI gali padėti jūsų komunikacijoje?</h2>
+        <p>AI įrankiai gali padėti:</p>
+        <ul>
+          <li>Generuoti idėjas įrašams</li>
+          <li>Kurti pirminius tekstų juodraščius</li>
+          <li>Analizuoti auditorijos elgseną</li>
+          <li>Optimizuoti publikavimo laikus</li>
+        </ul>
+        
+        <h2>Bet nepamirškite autentiškumo!</h2>
+        <p>Nors AI yra puikus pagalbininkas, svarbu neprarasti savo balso. Jūsų asmeninis prekės ženklas turi atspindėti tikrąjį jus – su visomis jūsų vertybėmis, patirtimi ir unikalia perspektyva.</p>
+        
+        <p>Naudokite AI kaip įrankį, bet leiskite savo asmenybei spindėti kiekviename įraše.</p>
+      `
+    },
+    {
+      slug: 'ceo-socialiniai-tinklai',
+      title: 'Vadovas pokyčių akivaizdoje: CEO ir socialiniai tinklai',
+      category: 'Vadovo asmeninis prekės ženklas',
+      image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/65d87357da5d205f2538ab62_Vadovai%20ir%20socialiniai%20tinklai.webp',
+      content: `
+        <p>Šiuolaikiniame verslo pasaulyje vadovų matomumas socialiniuose tinkluose tampa ne prabanga, o būtinybe. Tyrimai rodo, kad įmonės, kurių vadovai aktyviai dalyvauja socialiniuose tinkluose, sulaukia didesnio pasitikėjimo iš klientų ir darbuotojų.</p>
+        
+        <h2>Kodėl vadovui verta būti aktyviems?</h2>
+        <ul>
+          <li>Didina pasitikėjimą įmone</li>
+          <li>Pritraukia talentus</li>
+          <li>Stiprina ryšį su klientais</li>
+          <li>Formuoja pramonės nuomonę</li>
+        </ul>
+        
+        <h2>Kaip pradėti?</h2>
+        <p>Pradėkite nuo mažų žingsnių – dalinkitės savo mintimis apie industriją, sveikinkite komandos pasiekimus, reaguokite į aktualijas. Autentiškumas yra raktas – žmonės nori matyti tikrą asmenybę, ne korporacinę kaukę.</p>
+      `
+    },
+    {
+      slug: 'ambasadoryste-tendencijos',
+      title: 'Darbuotojų ambasadorystės ir komunikacijos socialiniuose tinkluose tendencijos',
+      category: 'Darbuotojų ambasadorystė',
+      image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/63c404bd6533f6f5a9648d33_Olga%20Kairiene%20Ambasadoryste%20(1)%20copy.jpg',
+      content: `
+        <p>Darbuotojų ambasadorystė tampa vis svarbesne darbdavio įvaizdžio strategijos dalimi. Organizacijos supranta, kad autentiškas darbuotojų balsas yra galingesnis nei bet kokia reklama.</p>
+        
+        <h2>Pagrindinės tendencijos</h2>
+        <ul>
+          <li>Augantis dėmesys autentiškumui</li>
+          <li>Video turinio populiarumas</li>
+          <li>LinkedIn kaip pagrindinė B2B platforma</li>
+          <li>Darbuotojų istorijų pasakojimas</li>
+        </ul>
+        
+        <h2>Kaip pradėti ambasadorystės programą?</h2>
+        <p>Sėkmingos programos pradžia – aiškus tikslas ir darbuotojų įtraukimas nuo pat pradžių. Svarbu sukurti saugią aplinką, kurioje darbuotojai jaustųsi laisvi dalintis savo patirtimi.</p>
+      `
+    },
+    {
+      slug: 'linkedin-smart-casual',
+      title: 'LinkedIn #SmartCasual stiliuje – būk savimi',
+      category: 'LinkedIn',
+      image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/635fa00dabdfdcf3bd94a2f1_Olga%20Kairiene%20-%20ambasadoryste.jpeg',
+      content: `
+        <p>LinkedIn dažnai suvokiamas kaip „oficiali" platforma, tačiau tai nereiškia, kad turite būti nuobodus ar dirbtinis. #SmartCasual stilius leidžia būti profesionaliems, bet išlikti savimi.</p>
+        
+        <h2>Kas yra #SmartCasual LinkedIn?</h2>
+        <p>Tai balansas tarp profesionalumo ir autentiškumo. Galite dalintis asmeninėmis istorijomis, parodyti savo asmenybę, tuo pačiu išlaikydami profesionalų toną.</p>
+        
+        <h2>Praktiniai patarimai</h2>
+        <ul>
+          <li>Dalinkitės ne tik pasiekimais, bet ir mokymosi patirtimi</li>
+          <li>Naudokite savo balsą – rašykite taip, kaip kalbate</li>
+          <li>Nebijokite parodyti savo asmenybės</li>
+          <li>Reaguokite į kitų turinį prasmingai</li>
+        </ul>
+      `
+    },
+    {
+      slug: 'asmeninis-prekes-zenklas-kodel-svarbu',
+      title: 'Asmeninis prekės ženklas – kodėl tai svarbu?',
+      category: 'Asmeninis prekės ženklas',
+      image: 'https://cdn.prod.website-files.com/5de5cc61264fd1db67a6bb5f/5feda1793532cb289641a6ab_Ambasadoriu%CC%A8%20Akademija%20(1).jpg',
+      content: `
+        <p>Asmeninis prekės ženklas nėra apie tai, kaip jūs norite būti matomi – tai apie tai, kaip jūs iš tikrųjų esate matomi. Tai jūsų reputacija, kuri egzistuoja net tada, kai jūsų nėra kambaryje.</p>
+        
+        <h2>Virtualus aš = Realus Aš</h2>
+        <p>Svarbiausia asmeninio prekės ženklo taisyklė – autentiškumas. Jūsų virtualus atvaizdas turi atitikti tikrąjį jus. Tai ne apie tobulybę, o apie nuoseklumą ir tikrumą.</p>
+        
+        <h2>Kodėl investuoti į asmeninį prekės ženklą?</h2>
+        <ul>
+          <li>Atskiria jus nuo konkurentų</li>
+          <li>Kuria pasitikėjimą</li>
+          <li>Atveria naujas galimybes</li>
+          <li>Padeda pritraukti tinkamus žmones</li>
+        </ul>
+        
+        <p>Nepretenduoju tapti jūsų asmeninio prekės ženklo eksperte, nes ekspertai esate Jūs! Mano užduotis – padėti jums tuo patikėti ir išdrįsti savo žiniomis pasidalinti su pasauliu.</p>
+      `
+    }
+  ];
+  
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout title={post.title} description={post.title}>
+  <article>
+    <section class="section" style="padding-top: 10rem; background: var(--color-light);">
+      <div class="container" style="max-width: 800px; text-align: center;">
+        <span class="blog-card-category" style="display: inline-block; margin-bottom: 1rem;">{post.category}</span>
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem);">{post.title}</h1>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <img src={post.image} alt={post.title} style="width: 100%; border-radius: 1rem; margin-bottom: 2rem;">
+        
+        <div class="blog-content" set:html={post.content} />
+        
+        <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #eee;">
+          <a href="/blog" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            ← Grįžti į blog'ą
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .blog-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .blog-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-content p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .blog-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .blog-content li {
+    margin-bottom: 0.5rem;
+  }
+</style>
